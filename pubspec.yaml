@@ -1,0 +1,68 @@
+name: nsfw_detector_app
+description: "SafeGuard — The Universal NSFW Image Guardian"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # ─── AI / Model ──────────────────────────────────────────
+  tflite_flutter: ^0.12.1
+  
+  # ─── State & Navigation ──────────────────────────────────
+  get: ^4.6.6
+  go_router: ^14.2.0
+
+  # ─── Image Handling ───────────────────────────────────────
+  image_picker: ^1.1.2
+  image: ^4.2.0
+
+  # ─── Local Storage ────────────────────────────────────────
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.0
+  shared_preferences: ^2.3.0
+  path: ^1.9.0
+
+  # ─── Permissions ──────────────────────────────────────────
+  permission_handler: ^11.3.0
+
+  # ─── Animations ───────────────────────────────────────────
+  flutter_animate: ^4.5.0
+  confetti: ^0.7.0
+
+  # ─── UI Components ────────────────────────────────────────
+  smooth_page_indicator: ^1.1.0
+  google_fonts: ^6.2.0
+
+  # ─── Utilities ────────────────────────────────────────────
+  share_plus: ^10.0.0
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/model/nsfw_detector_model.tflite
+    - assets/model/class_labels.txt
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
